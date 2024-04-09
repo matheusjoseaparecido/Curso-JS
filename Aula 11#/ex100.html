@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            font:normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1><strong>Localidade</strong></h1>
+    <input type="string" name="país" id="país">
+    <input type="button" value="Ver nacionalidade"  onclick="ver()">
+    <div id="res"></div>
+    <script>
+        function ver() {
+            var país = document.querySelector('input#país')
+            var res = document.querySelector('div#res')
+            if (país != 'Brasil'){
+                res.innerHTML = 'Você é um Estrangeiro!'
+            } else if (país == 'Brasil'){
+                res.innerHTML = 'Você é um Brasileiro!'
+            }
+        }
+    </script>
+</body>
+</html>
